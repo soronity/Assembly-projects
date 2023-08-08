@@ -1,6 +1,6 @@
-# Assembly# Language Specification
+# Language Specification for the Assembly# language
 
-Syntax is an amalgamation of C# and my over-the-top desire for super explicit and understandable code 
+The syntax of Assembly# is an amalgamation of C# and my over the top desire for super explicit and understandable code. 
 
 | **Type** | **Encoding** |
 |:---------|:-------------|
