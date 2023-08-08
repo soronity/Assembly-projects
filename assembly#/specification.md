@@ -1,4 +1,4 @@
-# Language Specification for the Assembly# language
+# Assembly# Language Specification
 
 Assembly# is a 32-bit language with 8-bit instructions. The syntax is an amalgamation of C#, the MIPS 32-bit instruction encoding and my (possibly over the top) desire for super explicit and understandable code. 
 
@@ -36,7 +36,7 @@ Assembly# is a 32-bit language with 8-bit instructions. The syntax is an amalgam
     There are four registers that can hold 32 bits of 
     data (integers). They are annotated by a US dollar sign ($) because money makes the world go round ($$$!!). Jokes aside, it's simply to stay congruent with the MIPS assembly convention of having the dollar sign as the intial token of a register name. 
 
-    - #zero           // always equals 0
-    - #inputOutput    // handles I/O
-    - #temporary1      // general-purpose
-    - #temporary2          // general-purpose
+    - $zero           // always equals 0
+    - $inputOutput    // handles I/O
+    - $temporary1     // general-purpose
+    - $temporary2     // general-purpose
