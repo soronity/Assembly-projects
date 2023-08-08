@@ -1,9 +1,6 @@
 # Assembly# Language Specification
 
-Syntax is an amalgamation of C# and my wackiness 
-
-
-## Instructions
+Syntax is an amalgamation of C# and my over-the-top desire for super explicit and understandable code 
 
 | **Type** | **Encoding** |
 |:---------|:-------------|
@@ -15,31 +12,31 @@ Syntax is an amalgamation of C# and my wackiness
 
 | **Instruction** | **Description** |
 |:----------------|:----------------|
-| `plus`           | `result = result + register + immediate` |
-| `minus`           | `result = result - register - immediate`  |
-| `addImmediate`           | `result = register + immediate` |
-| `jumpIfEqual`           | Jump one line if `(result == register && immediate) || (result != register && !immediate)`. |
+| `add`           | `result = result + register + immediate` |
+| `subtract`      | `result = result - register - immediate`  |
+| `addImmediateToResult` | `result = register + immediate` |
+| `conditionalJump` | Jump one line if `(result == register && immediate) || (result != register && !immediate)`. |
 
 ### Jump Instructions
 
 | **Instruction** | **Description** |
 |:----------------|:----------------|
-| `jump`             | Jump `address` lines. |
+| `jump`          | Jump `address` lines. |
 
 ### Special Instructions
 
 | **Instruction** | **Description** |
 |:----------------|:----------------|
-| `input`         | Get integer value from standard input stream and store in `#io`. |
-| `consolewriteline`         | Write the value of `#io` to the standard output stream. |
-| `terminate`          | Terminate program. |
+| `consoleReadLine`         | Get integer value from standard input stream and store in `#inputOutput`. |
+| `consoleWriteLine` | Write the value of `#inputOutput` to the standard output stream. |
+| `environmentExit`     | Terminate program. |
 
 ## Registers
 
     There are four registers that can hold 32 bits of 
     data (integers). They are annotated by an octothorpe, aka a number sign (#) 
 
-    - #zero    // always equals 0
-    - #io    // handles I/O
-    - #int1                                    
-    - #int2
+    - #zero           // always equals 0
+    - #inputOutput    // handles I/O
+    - #temporary1      // general-purpose
+    - #temporary2          // general-purpose
