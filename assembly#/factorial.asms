@@ -1,11 +1,20 @@
-$consoleReadLine
+$consoleReadLine                 //User inputs a natural number
+
 addImmediateToResult $zero n     // Initialize result with n
+
 conditionalJump $inputOutput 1   // If n == 0, jump to the end
+
 addImmediateToResult $zero -1    // Decrement n by 1
+
 conditionalJump $temporary1 1    // If result != 0, jump to loop start
+
 jump 3                            // Jump to end of loop
+
 add $inputOutput $zero $temporary1 // Multiply result by n
+
 addImmediateToResult $zero -1    // Decrement n by 1
+
 jump 4                            // Jump to loop start
+
 $consoleWriteLine
 $environmentExit
