@@ -1,8 +1,8 @@
     .data
 str: .asciiz "\nHello, world!"
 
-    .text
-    .globl main
+.text
+.globl main
 
 main:
     la $a0, str  # Load address of string into $a0
